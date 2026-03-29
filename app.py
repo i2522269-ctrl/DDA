@@ -29,4 +29,18 @@ class Cliente:
 # STREAMLIT
 #..............................................
 st.title("Demo POO - Ciencia De Datos")
-st.write("ingrese los datps del cliente")
+st.write("ingrese los datos del cliente")
+
+nombre = st.text_input("nombre")
+edad = st.number_input("edad", min_value=0)
+saldo = st.number_input("saldo", min_value=0.0)
+
+if st.button("crear cliente"):
+
+    #Secuencia
+    cliente = Cliente(nombre, edad, saldo)
+
+    st.success("cliente creado exitosamente")
+
+    st.write("### Información del cliente: ")
+    st.write(cliente. mostrar_info())
