@@ -35,7 +35,7 @@ if st.button("crear cliente"):
             "saldo": cliente.get_saldo()
         }
 
-        df = pd.DataFrame(data)
+        df = pd.DataFrame([data])
 
         st.caption("Tabla de clientes:")
         st.dataframe(df)
