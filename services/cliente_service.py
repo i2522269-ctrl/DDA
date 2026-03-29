@@ -14,11 +14,14 @@ def crear_cliente(nombre, edad, saldo):
     #Validación 3:saldo
     if saldo < 0:
         raise ValueError("El saldo no puede ser negativo")
-    
-    #Condicion Adicional
-    if saldo == 0:
-        print("Cliente sin saldo inicial")
-    
+        
     return Cliente(nombre, edad, saldo)
- 
     
+    cliente = Cliente(nombre, edad, saldo)
+
+    if saldo == 0: 
+        mensaje = "Cliente sin saldo"
+    else:
+        mensaje = "clienmte con saldo"
+
+    return cliente, mensaje

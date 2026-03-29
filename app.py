@@ -16,12 +16,25 @@ if st.button("crear cliente"):
 
     try:
         #Secuencia
-        cliente = crear_cliente(nombre, edad, saldo)
+        cliente, mensaje = crear_cliente(nombre, edad, saldo)
 
         st.success("cliente creado exitosamente")
 
+        st.info(mensaje)
+
         st.write("### Información del cliente: ")
         st.write(cliente. mostrar_info())
+
+        if hasattr(cliente, "clasificar_cliente"):
+            st.write("### Clasificación: ")
+            st.write(cliente.clasificar_cliente())
+    
+        if hasattr(cliente, "es_mayor_edad"):
+            if cliente.es_mayor_edad():
+                st.success("El cliente es mayor de edad")
+            else:
+                st.warning("El cliente es menor de edad")
+
 
     except Exception as e:
         st.error(str(e))
