@@ -8,14 +8,17 @@ from services.cliente_service import crear_cliente
 st.title("Demo POO - Ciencia De Datos")
 st.write("ingrese los datos del cliente")
 
+
+# Imputs
 nombre = st.text_input("nombre")
 edad = st.number_input("edad", min_value=0)
 saldo = st.number_input("saldo", min_value=0.0)
 
+# Boton
 if st.button("crear cliente"):
 
     try:
-        #Secuencia
+        #crea cliente + mensajes
         cliente, mensaje = crear_cliente(nombre, edad, saldo)
 
         st.success("cliente creado exitosamente")
@@ -25,16 +28,16 @@ if st.button("crear cliente"):
         st.write("### Información del cliente: ")
         st.write(cliente.mostrar_info())
 
-        if hasattr(cliente, "clasificar_cliente"):
-            st.write("### Clasificación: ")
-            st.write(cliente.clasificar_cliente())
-    
-        if hasattr(cliente, "es_mayor_edad"):
-            if cliente.es_mayor_edad():
-                st.success("El cliente es mayor de edad")
-            else:
-                st.warning("El cliente es menor de edad")
+        data = {
+            "nombre": cliente.get_nombre(),
+            "edad": cliente.get_edad(),
+            "saldo": cliente.get_saldo()
+        }
 
+        df = pd.DataFrame(data)
+
+        st.write("### Tabla de clientes:")
+        st.dataframe(df)
 
     except Exception as e:
         st.error(str(e))
