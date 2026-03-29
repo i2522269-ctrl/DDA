@@ -37,7 +37,7 @@ if st.button("crear cliente"):
 
         df = pd.DataFrame(data)
 
-        st.write("### Tabla de clientes:")
+        st.caption("Tabla de clientes:")
         st.dataframe(df)
 
     except Exception as e:
