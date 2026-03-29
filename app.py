@@ -15,13 +15,13 @@ class Cliente:
         return self,__nombre
 
     def get_edad(self):
-        return self:__edad
+        return self,__edad
     
     def get_saldo(self):
-        return self:__saldo
+        return self,__saldo
 
     
-    |# Metodos
+    # Metodos
     def depositar_info(self):
         return f"cliente: {self.__nombre}, edad: {self.__edad}, saldo: {self.__saldo}"
 
