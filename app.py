@@ -1,4 +1,4 @@
-import streamlit as it
+import streamlit as st
 
 #..............................................
 # CLASS (POO)
@@ -28,6 +28,5 @@ class Cliente:
 #..............................................
 # STREAMLIT
 #..............................................
-
 st.title("Demo POO - Ciencia De Datos")
 st.write("ingrese los datps del cliente")
