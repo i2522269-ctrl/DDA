@@ -10,13 +10,13 @@ class Cliente:
 
     # Getters (encapsulamiento)
     def get_nombre(self):
-        return self,__nombre
+        return self.__nombre
 
     def get_edad(self):
-        return self,__edad
+        return self.__edad
     
     def get_saldo(self):
-        return self,__saldo
+        return self.__saldo
 
     
     # Metodos
