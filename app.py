@@ -22,7 +22,7 @@ class Cliente:
 
     
     # Metodos
-    def depositar_info(self):
+    def mostrar_info(self):
         return f"cliente: {self.__nombre}, edad: {self.__edad}, saldo: {self.__saldo}"
 
 #..............................................
