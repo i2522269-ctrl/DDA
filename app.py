@@ -23,7 +23,7 @@ if st.button("crear cliente"):
         st.info(mensaje)
 
         st.write("### Información del cliente: ")
-        st.write(cliente. mostrar_info())
+        st.write(cliente.mostrar_info())
 
         if hasattr(cliente, "clasificar_cliente"):
             st.write("### Clasificación: ")
