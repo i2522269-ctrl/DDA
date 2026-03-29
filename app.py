@@ -1,6 +1,6 @@
 import streamlit as st
 from models.clientes import Cliente
-from services.cliente_service import crear_cliente
+from services.cliente.ervice import crear_cliente
 
 #..............................................
 # STREAMLIT
