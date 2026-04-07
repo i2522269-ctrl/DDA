@@ -1,4 +1,4 @@
-from models.cliente import Cliente
+from models.clientes import Cliente
 
 def crear_cliente(nombre, edad, saldo):
 

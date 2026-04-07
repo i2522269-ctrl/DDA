@@ -26,5 +26,5 @@ def procesar_cliente(nombre, edad, saldo):
     except ValueError as e:
         st.warning(str(e))
 
-    except Exception:
+    except Exception as e:
         st.error(str(e))

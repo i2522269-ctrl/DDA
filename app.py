@@ -1,8 +1,8 @@
 import streamlit as st
-from models.cliente import Cliente
+from models.clientes import Cliente
 from utils.form_utils import procesar_cliente
 from services.cliente_service import crear_cliente
-from utils.cliente_utils import (
+from utils.clientes_utils import (
     mostrar_tabla,
     mostrar_clientes,
     mostrar_analisis
