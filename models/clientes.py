@@ -1,24 +1,23 @@
-#..............................................
-# CLASS (POO)
-#..............................................
-
+# ----------------------------------------
+# CLASE (POO)
+# ----------------------------------------
 class Cliente:
     def __init__(self, nombre, edad, saldo):
         self.__nombre = nombre
         self.__edad = edad
         self.__saldo = saldo
 
-    # Getters (encapsulamiento)
+    #GETTERS (encapsulamiento)
     def get_nombre(self):
         return self.__nombre
-
+    
     def get_edad(self):
         return self.__edad
-    
+
     def get_saldo(self):
         return self.__saldo
+  
 
-    
-    # Metodos
+    # Método
     def mostrar_info(self):
-        return f"cliente: {self.__nombre}, edad: {self.__edad}, saldo: S/. {self.__saldo}"
+        return f"Cliente: {self.__nombre}, Edad: {self.__edad}, Saldo: S/ {self.__saldo}"
