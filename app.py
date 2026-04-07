@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from models.cliente import Cliente
+from models.cliente import cliente
 from services.cliente_service import crear_cliente
 
 
